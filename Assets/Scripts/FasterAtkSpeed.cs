@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FasterAtkSpeed : MonoBehaviour
 {
-    
+    [SerializeField]
     private GameObject Pistol;
     [SerializeField]
     private GameObject Player;

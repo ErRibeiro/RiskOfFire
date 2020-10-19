@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57dbcfe6ac70b7c4cbd454c66b0b46f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pistol: {fileID: 0}
+  Pistol: {fileID: 6395188941823369103, guid: 7933051b61ad44749ae573098f27d69e, type: 3}
   Player: {fileID: 6395188941823369103, guid: 7933051b61ad44749ae573098f27d69e, type: 3}
 --- !u!198 &-5993371952952490030
 ParticleSystem:
