@@ -8,6 +8,7 @@ public class Pistol : MonoBehaviour
     [SerializeField]
     private GameObject BulletP;
     [SerializeField]
+    private GameObject Weapon;
     public float cooldownTime;
     public float coolDown = 1;
 
@@ -20,6 +21,8 @@ public class Pistol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        BulletP.transform.position = Weapon.transform.position;
+        BulletP.transform.rotation = Weapon.transform.rotation;
         if (cooldownTime > 0)
         {
             cooldownTime -= Time.deltaTime;
@@ -30,7 +33,7 @@ public class Pistol : MonoBehaviour
         }
         if (Input.GetMouseButton(0) && cooldownTime == 0)
         {
-            GameObject bullet = Instantiate(BulletP);
+            Instantiate(BulletP);
            
             cooldownTime = coolDown;
         }

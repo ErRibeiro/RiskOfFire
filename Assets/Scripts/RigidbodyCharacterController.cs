@@ -47,6 +47,8 @@ public class RigidbodyCharacterController : MonoBehaviour
     private void Update()
     {
         input.x = Input.GetAxisRaw("Horizontal");
+      
         input.y = Input.GetAxisRaw("Vertical");
+        
     }
 }
