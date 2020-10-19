@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6395188941823369103}
-  m_LocalRotation: {x: 0.000008631789, y: 0.09039113, z: 0.0016447734, w: 0.99590504}
+  m_LocalRotation: {x: 5.8784605e-10, y: -0.00000011920929, z: -1.1652877e-10, w: 1}
   m_LocalPosition: {x: 35.159355, y: 4.19, z: 57.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -453,5 +453,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletP: {fileID: 5747519202923570320, guid: 756e5e60d64db8b498c008e825453e0a, type: 3}
   Weapon: {fileID: 0}
-  cooldownTime: 0
   coolDown: 1

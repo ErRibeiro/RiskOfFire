@@ -7,14 +7,23 @@ public class RigidbodyCharacterController : MonoBehaviour
     [SerializeField]
     private float accelerationForce = 10;
     [SerializeField]
-    private float maxSpeed = 2;
+    private float maxSpeed = 5;
+
+   
+    
+    [SerializeField]
+    private GameObject Player;
+    [SerializeField]
+    private Transform Cam;
+    [SerializeField]
+    private PhysicMaterial stoppingPhysicsMaterial, movingPhysicsMaterial;
+
 
     private new Rigidbody rigidbody;
     private Vector2 input;
+    
     private new Collider collider;
-
-    [SerializeField]
-    private PhysicMaterial stoppingPhysicsMaterial, movingPhysicsMaterial;
+    
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -47,8 +56,8 @@ public class RigidbodyCharacterController : MonoBehaviour
     private void Update()
     {
         input.x = Input.GetAxisRaw("Horizontal");
-      
+
         input.y = Input.GetAxisRaw("Vertical");
-        
+        transform.localRotation = Cam.transform.localRotation;
     }
 }

@@ -6,18 +6,23 @@ public class FasterAtkSpeed : MonoBehaviour
 {
     [SerializeField]
     private GameObject Pistol;
-    [SerializeField]
-    private GameObject Player;
-
+    private float pistolcd;
+    private float buffamount = .9f;
+    private void Start()
+    {
+        pistolcd = Pistol.GetComponent<PistolScript>().coolDown;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            buff();
             Destroy(this.gameObject);
-            float cd;
-            cd = Pistol.GetComponent<Pistol>().coolDown;
-            cd = cd * .9f;
-            Pistol.GetComponent<Pistol>().coolDown = cd;
         }   
+    }
+    private void buff()
+    {
+        pistolcd = pistolcd * .9f;
+        Pistol.GetComponent<PistolScript>().coolDown = pistolcd;
     }
 }

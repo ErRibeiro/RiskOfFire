@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PistolScript : MonoBehaviour
+public class Pistol : MonoBehaviour
 {
     [SerializeField]
     private GameObject BulletP;
     [SerializeField]
     private GameObject Weapon;
-    private float cooldownTime;
+    public float cooldownTime;
     public float coolDown = 1;
 
     void Update()
@@ -31,6 +31,10 @@ public class PistolScript : MonoBehaviour
             cooldownTime = coolDown;
         }
     }
+    //private void FasterAtkSpeed()
+    //{
+    //    coolDown = coolDown * .9f;
+    //}
 }
 
     

@@ -11,10 +11,6 @@ public class Bullet : MonoBehaviour
     private GameObject player;
 
     private float BulletLife = 10;
-    void Start()
-    {
-       
-    }
 
     // Update is called once per frame
     void Update()
